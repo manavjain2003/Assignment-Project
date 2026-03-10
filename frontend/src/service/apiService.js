@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api_url = 'http://localhost:5000/api';
+const api_url = 'https://ssignment-roject-manavjain20034260-vkluq3ry.leapcell.dev/api';
 
 const headertoken = () => {
     const token = localStorage.getItem('token');
