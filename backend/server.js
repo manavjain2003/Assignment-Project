@@ -9,7 +9,7 @@ const taskRoutes = require('./routes/task.routes');
 const cors = require('cors');
 
 MongoDbConnect();
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: 'https://ssignment-roject-manavjain20034260-vkluq3ry.leapcell.dev/api' }));
 app.use(express.json());
 app.use('/api/user', userRoutes);
 app.use('/api/project', projectRoutes);
