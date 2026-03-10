@@ -57,11 +57,13 @@ function Dashboard() {
       <h2>Dashboard</h2>
       <div className="create-project">
         <input type="text" placeholder="Project name" value={projectName} onChange={(e) => setProjectName(e.target.value)} />
+ {user?.role === 'admin' ? (
 <select multiple value={selectedUsers} onChange={handleUserSelect}>
     {users.map(user => (
         <option key={user._id} value={user._id}>{user.name}</option>
     ))}
 </select>
+) : null}
 <p className='hint-help'>Drag in users dropdown to select mutliple</p>
     {user?.role === 'admin' ? (
   <button onClick={handleCreateProject}>Create Project</button>
