@@ -1,0 +1,37 @@
+.login-container {
+    width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-container input {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.login-container button {
+    padding: 8px;
+    background-color: greenyellow;
+    color: white;
+}
+
+.register-container {
+    width: 300px;
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register-container input {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.register-container button {
+    padding: 8px;
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,36 @@
+.project-container {
+    width: 700px;
+    margin: 50px auto;
+}
+
+.create-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.create-task input {
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+}
+
+.create-task button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #1c1c1c;
+}
