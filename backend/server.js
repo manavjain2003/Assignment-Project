@@ -10,7 +10,7 @@ const cors = require('cors');
 
 MongoDbConnect();
 app.use(cors({
-  origin: 'https://assignment-project-pi-five.vercel.app/',
+  origin: 'https://assignment-project-pi-five.vercel.app',
 }));
 app.use(express.json());
 app.use('/api/user', userRoutes);
