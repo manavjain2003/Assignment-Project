@@ -26,7 +26,7 @@ function Dashboard() {
     setProjects(data);
   };
 
-  const user = getCurrentUser();
+  const user = getUserRole();
 
   const handleUserSelect = (e) => {
     const selected = [];
