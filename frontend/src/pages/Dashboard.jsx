@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { fetchProjects, createProject, fetchUsers } from '../service/apiService';
+import { fetchProjects, createProject, fetchUsers , getUserRole } from '../service/apiService';
 import '../styles/dashboard.css';
 
 function Dashboard() {
@@ -26,6 +26,8 @@ function Dashboard() {
     setProjects(data);
   };
 
+  const user = getCurrentUser();
+
   const handleUserSelect = (e) => {
     const selected = [];
     for(let i = 0; i < e.target.selectedOptions.length; i++){
@@ -49,6 +51,7 @@ function Dashboard() {
     }
   };
 
+  
   return (
     <div className="dashboard-container">
       <h2>Dashboard</h2>
@@ -60,7 +63,9 @@ function Dashboard() {
     ))}
 </select>
 <p className='hint-help'>Drag in users dropdown to select mutliple</p>
-        <button onClick={handleCreateProject}>Create Project</button>
+    {user?.role === 'admin' ? (
+  <button onClick={handleCreateProject}>Create Project</button>
+) : null}
       </div>
       <h3>Projects</h3>
        <ul>

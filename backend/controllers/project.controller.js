@@ -13,10 +13,12 @@ const createProject = async (req, res) => {
 
 const getProjects = async (req, res) => {
     try {
-        const projects = await ProjectModal.find().populate('users');
+        const projects = await ProjectModal.find(
+         req.user.role === 'admin' ? {} : { users: req.user.id }
+        ).populate('users');
         res.status(200).json(projects);
     } catch (error) {
-        res.status(500).json({ message: "Error while fetching projects, please try again later" });
+        res.status(500).json({ message: "Error while fetching projects, please try again later or referesh page" });
     }
 };
 
